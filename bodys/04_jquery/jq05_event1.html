@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Event Test 1 **</title>
+<script src='./jquery-3.2.1.min.js'></script>
+<script>
+	$(document).ready(function(){
+		// 1. click
+		$('h1').click(function(){
+			alert('클릭!...') ;
+		}) ;
+		// 2. hover => 매개변수로 f1(마우스hover시), f2(반대의경우)
+		// 	  $(this) : 현재 가리키고 있는 요소 자신을 반환
+		$('h1').hover(function(){
+				$(this).css({background:'red',
+                    		 color:'white',
+                    		 width:300});
+				}, // function1
+					  function(){
+                $(this).css({background:'',
+                       		 color: '' ,
+                       		 width:''});
+                 } // function2
+		) // hover
+	}) // ready
+</script>
+	
+</head>
+<body>
+<h1>Click</h1>
+</body>
+</html>

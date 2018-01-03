@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Selector Basic_tag, id, class **</title>
+<style type="text/css">
+	* {color: orange;}
+	/* h1, h2 {color: blue} */
+	input[type="text"] {background:red}
+	input[type="password"] {background:blue}
+	#id1 {color: green}
+	.cl1 {color: red}
+	.cl2{color: yellow}
+</style>
+</head>
+<body>
+<h1>** Selector Basic_tag**</h1>
+
+<form>
+  <h2>** Form input tag Test **</h2>
+	<input type="text" />
+	<input type="password" />
+</form>
+
+<h1 id="id1">** Selector Basic_id **</h1>
+<h3> id 는  유일 해야 함 => 자바 스크립트에서 문제 발생됨</h3>
+
+<h1 id="id1">** Selector Basic_class **</h1>
+<h3> class 는  중복될 수 있음 </h3>
+<ul>
+	<li class="cl1">사과</li>
+	<li class="cl2">바나나</li>
+	<li class="cl1">오렌지</li>
+	<li class="cl2">키위</li>
+</ul>
+
+</body>
+</html>

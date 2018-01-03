@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** css Style Test **</title>
+<script src='../jqLib/jquery-3.2.1.min.js'></script>
+<script>
+	$(document).ready(function(){
+		// 1. h2 스타일 속성 변경  => css 
+		$('h2').css('color', 'red') ;
+		$('h2').css('background', 'black') ;
+		
+		$('h3').css({color:'yellow', background:'blue'}) ;
+		// 한번에 여러 속성
+		// 2. box => css 메서드의 매개변수로 객체를 넣음
+		$('.box').css({
+						float: 'left',
+						margin:10,
+						width:100,
+						height:100,
+						background:'orange'
+					  }) ;
+		
+		// 3. body color Gradation
+		//		=> css 메서드의 속성값에 function 적용
+		var output = '' ;
+		for (var i=0 ; i<256; i++) {
+			output +='<div></div>' ;
+		} // for
+		document.body.innerHTML=output ;
+		$('div').css({
+					height:2,
+					background: function(i) {
+						return 'rgb('+i+','+i+','+i+')' ;
+						}
+					})
+		
+	}) //ready 
+</script>
+</head>
+<body>
+<h2>Style Test1</h2>
+<h3>=> css 메서드 활용1</h3>
+<h2>Style Test2</h2>
+<h3>=> 한번에 여러 속성 처리</h3>
+<h3>=> css 메서드의 매개변수로 객체를 넣음</h3>
+<h2>Style Test3</h2>
+<h3>=> body color Gradation</h3>
+<h3>=> css 메서드의 속성값에 function 적용</h3>
+<br><hr><br>
+<div class='box'></div>
+<div class='box'></div>
+<div class='box'></div>
+</body>
+</html>

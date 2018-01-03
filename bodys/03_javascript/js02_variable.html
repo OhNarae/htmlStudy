@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** JavaScript Basic02 : 변수 **</title>
+<script type="text/javascript">
+	var a=2;
+	var b=100;
+	var c='가나다'; d=123;
+	/* alert('b='+b) ;
+	alert('a+b='+(a+b)) ;
+	alert('c+d='+(c+d)) ; */
+	/* a=c ;
+	alert('a='+a) ;
+	c=b;  //c <- 100
+	alert('c+d='+(c+d)) ;  // 223 */
+	// Test2. document.write
+	/* document.write(a+'<br>') ;
+	document.write('a+b='+(a+b)+'<br>') ;
+	document.write('c='+c+'<br>') ; */
+	
+	// Test3. 다양한 자료형
+	/* var n1=100; n2=3.141592;
+	document.write('정수:'+n1+' / 실수: '+n2+'<br>') ;
+	var b1=(20>30); b2=(20<30);
+	document.write('Boolean: b1='+b1+' / b2='+b2+'<br>') ; */
+	
+	// Test4.객체(Object) : 여러 데이터를 묶은 덩어리
+	var mem={num:100, id:'banana', name:'홍길동'}
+	mem.name='바나나' ;
+	document.write('member: num='+mem.num+'<br>');
+	document.write('member: id='+mem.id+'<br>');
+	document.write('member: name='+mem.name+'<br>');
+	
+	// Test5.문자열 함수
+	var s='abcdefg' ;
+	alert('s.length='+ s.length) ; // 문자열의 길이
+	alert('s.charAt()='+ s.charAt(0)) ; // 문자열에 있는 문자중 하나를 뽑아줌.
+	alert('s.replace()='+ s.replace('b', 'banana')) ; // 문자열의 b를 ~~~로 교체함.
+	alert('s.toUpperCase='+ s.toUpperCase()) ; // 문자열 전체를 대문자로 변경함.
+	
+</script>
+</head>
+<body>
+<h3>**1.변수의 선언과 출력: alert() **</h3>
+<h3>**2. document.write **</h3>
+<h3>**3. 다양한 자료형 **</h3>
+<h3>**4. 객체(Object) : 여러 데이터를 묶은 덩어리 **</h3>
+<h3>**5. 문자열 함수 **</h3>
+</body>
+</html>

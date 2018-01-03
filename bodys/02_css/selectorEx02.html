@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** CSS3 Selector_Child & Desc **</title>
+	<style type="text/css">
+		#header > h1 {color:aqua;}  /* child h1만 해당 */
+		#section h1 {color:orange;} /* 후손들 h1 모두 해당 */
+	</style>
+</head>
+<body>
+<h1>** CSS3 Selector_Child : 자식만 해당  **</h1>
+	<div id="header">
+		<h1>header의 child1</h1>
+		<h1>header의 child2</h1>
+		<div>
+			<h1>header의 손자1</h1>
+			<h1>header의 손자2</h1>
+		</div>
+	</div>
+<h1>** CSS3 Selector_Descendent : 후손들 모두 해당 **</h1>	
+	<div id="section">
+		<h1>section의 child1</h1>
+		<h1>section의 child2</h1>
+		<div>
+			<h1>section의 손자1</h1>
+			<h1>section의 손자2</h1>
+		</div>
+	</div>
+</body>
+</html>

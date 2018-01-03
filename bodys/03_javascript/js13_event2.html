@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** JavaScript Code 작성 _ Internal **</title>
+</head>
+<body>
+<h3>JavaScript Code 작성 _ Internal </h3>
+<h3> 1.  script 태그 이용  </h3>
+<h3> 2.  태그내에 이벤트의 속성값으로 이벤트 핸들링 코드 작성  </h3>
+<h3> 3.  a 태그의 url 값에 javascript: 구문 작성 </h3><br>
+<pre>
+=> javascript: 1) javascript 구문 작성
+=> javascript: 2) url 에 메서드를 지정하면 클릭시 실행됨.
+=> javascript: 3) void 를 사용해서 직접 내용을 코딩 할 수 있음.
+   
+=> void 연산자는 undefined 를 반환해서, 웹페이지의 표시 내용이
+   코드의 반환값으로 대체되지(영향받지) 않도록 해줄수 있고,
+=> undefined 가 아니라면 화면 내용을 실행 값으로 대체합니다.
+   
+=> void 0 와 void(0) 동일 : undefined 를 반환  
+</pre>
+<a href="javascript:void(0);">클릭해도 아무일도 일어나지 않아요</a><br>
+<a href="javascript:void(document.body.style.backgroundColor='green');">클릭하면 배경색 green으로 </a><br>
+
+<a href="javascript:abc='hello'">페이지 내용이 hello로 변경</a><br>
+
+<a href='javascript:history.go(-1)'>이전으로</a><br>
+
+<a href="javascript:var e='http://naver.com'; window.open(e);
+		void 0;">새창으로</a>
+</body>
+</html>

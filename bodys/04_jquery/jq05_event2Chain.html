@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Event Test 2 **</title>
+<script src='./jquery-3.2.1.min.js'></script>
+<script>
+// 하나의 태그에 스타일 변경 및 이벤트를 연결....	
+// jQuery 라이브러리의 문서객체 조작 메서드는
+// 호출 이후 자기 자신을 반환하는 특징이 있으므로
+// $...태그를 반복적으로 사용할 필요 없이 
+// 아래 처럼 메서드를 연속 사용할 수 있음
+	$(document).ready(function(){
+	 // 1. 메서드 체이닝 방법	
+	 	/* $('#box').css({
+	 		width: 200,
+            height: 200,
+            background: 'orange'
+	 	}).on('click', function() {
+	 		$(this).css('background', 'blue')
+	 	}).on('mouseenter',function() {
+	 		$(this).css('background', 'green')
+	 	}).on('mouseleave',function() {
+	 		$(this).css('background', 'yellow')
+	 	}) ; */
+	 
+	 // 2. 객체사용 연결 => 매개변수로  여러 이벤트 연결
+	 	$('#box').css({
+	 		width: 300,
+            height: 300,
+            background: 'orange'
+	 	}).on({
+	 		  click:function() {
+	 			 $(this).css('background', 'blue')
+	 		},mouseenter:function() {
+	 			$(this).css('background', 'green')
+	 		},mouseleave:function() {
+	 			$(this).css('background', 'yellow')
+	 		}
+	 	}); // on
+	 	
+	 // 3. 기본 이벤트 제거
+	 //   => a 태그 또는 submit 에 내장된 기본 이벤트를 무효화 할때 이용
+	 $('a').click(function(event){
+			alert('기본 이벤트를 제거합니다~~~') ;
+			event.preventDefault();  // 기본 이벤트를 제거합니다.
+	 })	// click
+	 
+	}) // ready
+</script>
+</head>
+<body>
+<div id="box">Event</div><br><br>
+<a href="http://naver.com">NAVER 바로가기</a>
+</body>
+</html>

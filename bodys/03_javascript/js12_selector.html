@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Selector _ id, tag1, tag all **</title>
+<script>
+        // 이벤트를 연결합니다.
+        onload = function() {
+            // 1. id
+            //var header = document.getElementById('header');
+            // 2. query => tag
+            /* var header = document.querySelector('h4');
+            // 문서 객체의 속성을 조작합니다.
+            header.style.color = 'orange';
+            header.style.background = 'red';
+            header.innerHTML = 'Select ID ... From JavaScript'; */
+            
+            // 3. tag all	
+        	var headers = document.querySelectorAll('h4');
+            for (var i=0;i<headers.length; i++){
+            	var header = headers[i];
+            	header.style.color = 'orange';
+                header.style.background = 'red';
+                header.innerHTML = 'Select ID ... From JavaScript';
+            } // for
+        };
+    </script>
+</head>
+<body>
+<h3>** 1. id => document.getElementById('header')</h3>
+<h3 id="header">Header Header</h3>
+<pre>
+** 2. query 
+	=> document.querySelector('h4')
+	=> 선택자(태그) 를 이용해서 선택합니다.
+	=> 처음 1개의 tag 만 선택됨
+
+** 3. tag all 
+	=> document.querySelectorAll('h4')
+	=> 선택자(태그) 를 이용하여 모두 선택해서 배열로...
+</pre>
+<h4>querySelector1</h4>
+<h4>querySelector2</h4>
+<h4>querySelector3</h4>
+</body>
+</html>

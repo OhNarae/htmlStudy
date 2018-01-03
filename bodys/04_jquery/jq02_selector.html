@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Selector , Hover event Test **</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#box').hover(
+			function() {$('#box').addClass('ho');   },
+			function() {$('#box').removeClass('ho');} ) 
+		})  // ready
+	// hover (이벤트)메서드
+	// hover(f1, f2)   => f1은 마우스hover 실행,  f2 반대경우 실행 
+	// => addClass('hover') : id box 인 div 에게 class hover 를 추가
+	// => removeClass('hover') : id box 인 div 에게 class hover 를 제거
+	
+</script>
+<style type="text/css">
+	#box {width: 100px; height: 100px; background-color: red;}
+	#box.ho {background-color: blue; border-radius: 50px;}
+</style>
+
+</head>
+<body>
+<div id='box'>
+</div>
+</body>
+</html>

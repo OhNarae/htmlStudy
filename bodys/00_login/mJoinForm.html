@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** member Join Form **</title>
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#id').focusout(function() {
+			var id = $('#id').val();
+			if (id.length < 3 | id.length > 10) {
+				$('#id_msg').text('3자 이상 20자 이하로 입력해주세요.');
+			} else if (!/^[A-Za-z]$/.test(id[0])) {
+				$('#id_msg').text('첫번째는 반드시 알파벳이어야 합니다.');
+			} else if (!/^[A-Za-z0-9]+$/.test(id)) {
+				$('#id_msg').text('id는 알파벳,숫자만 가능합니다.');
+			} else {
+				$('#id_msg').text('');
+			}
+		})
+
+		$('#password').focusout(function() {
+			var password = $('#password').val();
+			if (password.length < 2 | password.length > 10) {
+				$('#password_msg').text('2자 이상 10자 이하로 입력해주세요.');
+			} else if (!/^[A-Za-z0-9]+$/.test(password)) {
+				$('#password_msg').text('패스워드는 알파벳, 숫자 만 가능합니다.');
+			} else {
+				$('#password_msg').text('');
+			}
+		})
+
+		$('#name').focusout(function() {
+			var name = $('#name').val();
+			if (name.length < 2 | password.length > 30) {
+				$('#name_msg').text('2자 이상 30자 이하로 입력해주세요.');
+			} else if (name.replace(/[가-힣]/g, '').length > 0) {
+				$('#name_msg').text('이름은 한글만 가능합니다.');
+			} else {
+				$('#name_msg').text('');
+			}
+		})
+
+
+		$('#birthd').focusout(function() {
+			var Now = new Date();
+			var birthd = new Date($('#birthd').val());
+
+			if (birthd >= Now) {
+				$('#birthd_msg').text('태어난 날짜가 올바르지 않습니다.');
+			} else {
+				$('#birthd_msg').text('');
+			}
+		})
+
+
+		$('#point').focusout(function() {
+			var point = $('#point').val();
+			if (point.length < 1) {
+				$('#point_msg').text('값을 입력해주세요.');
+			} else if (point.length > 10) {
+				$('#point_msg').text('포인트는 10자리를 넘을 수 없습니다.');
+			} else {
+				$('#point_msg').text('');
+			}
+		})
+
+		$('#weight').focusout(function() {
+			var weights = $('#weight').val().split('.');
+			if ($('#weight').length < 1) {
+				$('#weight_msg').text('값을 입력해주세요.');
+			} else if (weights.length > 0 && weights[0].length > 3) {
+				$('#weight_msg').text('999.99 이상 입력될 수 없습니다.');
+			} else if (weights.length > 1 && weights[1].length > 2) {
+				$('#weight_msg').text('소숫점 둘째 자리까지 가능합니다.');
+			} else {
+				$('#weight_msg').text('');
+			}
+		})
+	})
+
+	function submitF() {
+		if ($('#id').val() == "") $('#id_msg').text('데이터를 입력해주세요');
+		if ($('#password').val() == "") $('#password_msg').text('데이터를 입력해주세요');
+		if ($('#name').val() == "") $('#name_msg').text('데이터를 입력해주세요');
+		if ($('#birthd').val() == "") $('#birthd_msg').text('데이터를 입력해주세요');
+		if ($('#point').val() == "") $('#point_msg').text('데이터를 입력해주세요');
+		if ($('#weight').val() == "") $('#weight_msg').text('데이터를 입력해주세요');
+
+		if ($('#id_msg').text().length > 0) return false;
+		if ($('#password_msg').text().length > 0) return false;
+		if ($('#name_msg').text().length > 0) return false;
+		if ($('#birthd_msg').text().length > 0) return false;
+		if ($('#point_msg').text().length > 0) return false;
+		if ($('#weight_msg').text().length > 0) return false;
+	}
+</script>
+</head>
+<body>
+	<h1>** member Join Form **</h1>
+	<br>
+	<form action="./mJoinFinish.html" method="get"
+		onsubmit="return submitF();">
+		<table border="1" width="700">
+			<tr height="40">
+				<td bgcolor="gray" width="100" align="center">ID</td>
+				<td align="left"><input type="text" name="id" id="id"></input>
+					<span id="id_msg" style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="gray" width="100" align="center">Password</td>
+				<td align="left"><input type="password" name="password"
+					id="password"></input> <span id="password_msg" style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="gray" width="100" align="center">Name</td>
+				<td align="left"><input type="text" name="name" id="name"></input>
+					<span id="name_msg" style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="gray" width="100" align="center">Level</td>
+				<td align="left"><select name="lev" id="lev">
+						<option value="A">관리자</option>
+						<option value="B">나무</option>
+						<option value="C">잎새</option>
+						<option value="D" selected>새싹</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td bgcolor="gray" width="100" align="center">BirthDay</td>
+				<td align="left"><input name="birthd" type="date" id="birthd" />&nbsp</input><span
+					id="birthd_msg" style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="gray" width="100" align="center">Point</td>
+				<td align="left"><input type="text" name="point" id="point"></input>
+					<span id="point_msg" style="color: red"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="gray" width="100" align="center">Weight</td>
+				<td align="left"><input type="text" name="weight" id="weight"></input>
+					<span id="weight_msg" style="color: red"></span></td>
+			</tr>
+			<tr height="40">
+				<td colspan="2" align="center"><input type="reset" value="취 소" /><input
+					type="submit" value="등 록" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

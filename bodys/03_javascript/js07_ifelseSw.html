@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** if then else Test **</title>
+<script>
+    // 1 기본 조건문
+    /* if (273 < 52) {
+        // 표현식 "273 < 52"가 참일 경우 실행합니다.
+        alert('273 > 52 => true');
+    }else alert('273 < 52 => false'); */
+   
+    // 2. if then else if ...
+   /*  var d = new Date() ;
+    var hour = d.getHours();
+    if (hour < 5) {
+    	alert('쿨쿨 잔다 ....');
+    } else if (hour < 9) {
+    	alert('출근 준비와 출근....');
+    } else if (hour < 13) {
+    	alert('열심히 오전 수업....');
+    } else if (hour < 14) {
+    	alert('맛있는 점심....');
+    } else {
+    	alert('열심히 오후 수업....');
+    } */
+    
+ // 3. 중첩 if then else ...
+    /* var d = new Date() ;
+    var hour = d.getHours();
+    if (hour < 5) {
+    	alert('쿨쿨 잔다 ....');
+    } else { 
+    	if (hour < 9) {
+    		alert('출근 준비와 출근....');
+    		} else {
+    			if (hour < 13) {
+    				alert('열심히 오전 수업....');
+    				} else {
+    					if (hour < 14) {
+    						alert('맛있는 점심....');
+    					}else{
+    						alert('열심히 오후 수업....');
+    					}
+    				}
+    		}
+    }
+     */
+   // 4. switch ~ case ...  
+   var d = new Date() ;
+   var month = d.getMonth() + 1 ;
+  /*  if ( month>=3 && month<=5 ) {
+	   alert('나른한 봄날 입니다....');
+   } else if (  month>=6 && month<=8 ) {
+	   alert('무더운 여름 입니다....');
+   } else if (  month>=9 && month<=11 ) {
+	   alert('단풍이 아름다운 가을 입니다....');   
+   } else alert('눈이 아름다운 겨울 입니다....');   */
+ 
+   switch(month) {
+   case 3: case 4:  case 5:  alert('나른한 봄날 입니다....'); break;
+   case 6: case 7:  case 8:  alert('무더운 여름 입니다....'); break;
+   case 9: case 10: case 11: alert('단풍이 아름다운 가을 입니다..'); break;
+   case 12: case 1: case 2: alert('성탄절이 있는 겨울 입니다..'); break;
+   default : alert('지구에는 없는 달 입니다~~~');
+   }
+   
+   // 프로그램 종료
+   // alert('프로그램 종료');
+</script>
+</head>
+<body>
+<h2>** 1. 기본 조건문_if then else  **</h2>
+<h2>** 2. if then else if ... **</h2>
+<h2>** 3. 중첩 if then else ... **</h2>
+<h2>** 4. if then else if 의 복합조건식과 switch~case **</h2>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** jQuery Basic **</title>
+<!-- <script src="http://code.jquery.com/jquery-3.2.1.js"/> -->
+<!-- 라이브러리  http://jquery.com 
+  1. 다운로드 
+	=> ver 1. 대 사용 권장 
+    => ver 2 이상은 익스플로러 8 이하에서는 불가능
+  2. CDN 호스트 사용 "//code.jquery.com/jquery-1.12.0.min.js"   -->
+
+<script src="jquery-3.2.1.min.js"></script>
+
+
+<script>
+	$(document).ready(function() {
+	// ready : 문서 객체 준비 완료됨을 의미하는 기본 이벤트	
+	// 			=> window.onload 이벤트와 같은 기능	
+		// 1. 출력
+		//document.write('** Hellow~ JQuery !!!**') ;
+		//document.close();
+		
+		// 2. Selector
+		/* $('h3').css('color', 'red') ;
+		$('h3').css('background', 'black') ; */
+		// 한줄로
+		//$('h3').css({color:'red', background:'black'}) ;
+		
+		// 3. Text 의 인식
+		var text = $('h3').text() ;
+		var html = $('h3').html() ;
+		alert('text: '+text) ;
+		alert('html: '+html) ; 
+		
+		// 4. Text 의 출력
+		/* $('h3:nth-child(1)').text('<a href="#">text()</a>')
+		$('h3:nth-child(2)').html('<a href="#">html()</a>') */
+	}) // ready	
+</script>
+</head>
+<body>
+<h3>Selector Test 1<br>
+하하하하하하<br>
+호호호호호</h3>
+<h3>Selector Test 2</h3>
+<h3>Selector Test 3</h3>
+</body>
+</html>

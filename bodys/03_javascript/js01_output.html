@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** JavaScript Basic01 : Output **</title>
+<script type="text/javascript">
+	/* alert('My First "JavaScript" Test !!!') */
+	/* 여러줄
+		주석 */
+	// 한줄 주석
+	document.write('출력2. 자바 스크립트 내부파일에서 출력하기<br>') ;
+	document.write('줄바꿈 처리는 "br"') ;
+</script>
+<style type="text/css">
+	button {border-radius: 15px 15px 15px 15px; 
+			background-color:gray; color:aqua; 
+			text-shadow: 2px 2px 2px navy; 
+			font-size:1.5em; width:200px;height:80px;}
+</style>
+</head>
+<body>
+<h2>** JavaScript Basic01 : Output **</h2>
+<h3>문자열 출력1 : alert() 함수 경고창 이용<br>
+문자열 표현 : "..." , '...' 모두 가능 하지만 '.."자바"..' 를 권고함<br>
+=> alert : 위험, 문제, 경고 등을 알리다.<br><br>
+<button onclick="alert('alert : 정신이 초롱초롱한')">OutputTest</button><br><br>
+** 쉬운 출력2 와 주석  **<br>
+=> 쉬운 출력2 : document.write("...")<br>
+=> 주석은 자바와 동일<br>
+
+** 3. 외부화일 사용하기 **<br>
+=> 텍스트 화일, 확장자는 .js 입니다.<br>
+=> script 태그에서 src="js01ext.js" 로 ...<br>
+<script src="js01ext.js"></script>
+</h3>
+</body>
+</html>

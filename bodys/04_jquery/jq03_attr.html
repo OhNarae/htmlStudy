@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** attr 메서드 Test **</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+	// 1. 속성을 추출(get)
+		/* var src = $('script').attr('src');
+		alert(src); */
+		// attr 메서드에 매개변수를 하나만 입력하면 해당 매개변수 속성값 추출
+	
+	// 2-1. 속성을 지정(set) => attr 매개변수로 속성과 속성값 입력	
+		/* $('img').attr('src','../image/a5.png') ;
+		$('img').attr('width','100') ;
+		$('img').attr('height','100') ; */
+		
+	// 2-2. attr 의 매개변수로 한번에 여러 속성 지정
+		/* $('img').attr({src:'../image/a5.png',
+					   width: 200, height:100}) ; */
+		
+	// 2.3. function 으로 속성 지정
+	// 익명의 콜백함수의 i (매개변수) 값에 해당 객체가 0부터 순서대로 적용되며  
+	// 리턴값을 속성에 적용함.
+	// 2.3.1 
+	// src 속성에 적용 
+	// => 일반 image 사용시에는 image 화일명 return 
+	// => http://placehold.it 활용하면 크기까지 변경 가능
+		 /* $('img').attr({src:function(i){
+			var size=(i+1)*100 ;
+			//return 'http://placehold.it/' + size + 'x100';}
+			return '../image/a4.png'; }
+		}) ; // atttr */
+		//http://placehold.it => 더미 이미지를 생성해 주는 서비스
+		// => http://placehold.it/200X100
+	// 2.3.2 
+	// width 속성에 적용하여 image size 변경 	
+		$('img').attr({src:'./a5.png',
+					   width:function(i){var size=(i+1)*100; return size;}
+					 , height:100 
+		}) ; // atttr		  
+	})  // ready
+</script>
+</head>
+<body>
+<h3>** 문서객체의 속성 조작 => attr()  method 사용</h3>
+	<img />
+	<img />
+	<img />
+</body>
+</html>
+
+
+

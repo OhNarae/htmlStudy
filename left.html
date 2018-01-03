@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>** Left Menu **</title>
+<style>
+.menu a {
+	cursor: pointer;
+}
+
+.menu .hide {
+	display: none;
+}
+</style>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script>
+	// html dom 이 다 로딩된 후 실행된다.
+	$(document).ready(function() {
+		// menu 클래스 바로 하위에 있는 a 태그를 클릭했을때
+		$(".menu>a").click(function() {
+			var submenu = $(this).next("ul");
+
+			// submenu 가 화면상에 보일때는 위로 보드랍게 접고 아니면 아래로 보드랍게 펼치기
+			if (submenu.is(":visible")) {
+				submenu.slideUp();
+			} else {
+				submenu.slideDown();
+			}
+		});
+	});
+</script>
+</head>
+<body link="black" vlink="black">
+	<div>
+		<ul>
+			<a href="./bodys/00_login/mJoinForm.html"
+				target="main">회원가입</a><br><br>
+			<li class="menu"><a>HTML</a>
+				<ul class="hide">
+					<li><a href="./bodys/01_html/font.html" target="main">TEXT
+							& Image</a></li>
+					<li><a href="./bodys/01_html/imagenLink.html" target="main">Image
+							& Color</a></li>
+					<li><a href="./bodys/01_html/formGroup.html" target="main">fieldset/legend
+							Test</a></li>
+					<li><a href="./bodys/01_html/insa.html" target="main">각
+							국가별 인사말</a></li>
+					<li><a href="./bodys/01_html/multiMediaEx.html" target="main">Multimedia</a></li>
+					<li><a href="./bodys/01_html/spaceEX01.html" target="main">HTML
+							Space BasicPage</a></li>
+					<li><a href="./bodys/01_html/spaceEX02_divL.html"
+						target="main">Div_layout [semanticLess]</a></li>
+					<li><a href="./bodys/01_html/spaceEX03_semL.html"
+						target="main">Semantic_layout</a></li>
+					<li><a href="./bodys/01_html/spaceEX04_frmL.html"
+						target="main">Frame_layout</a></li>
+					<li><a href="./bodys/01_html/textEX01.html" target="main">Text
+							관련Tag</a></li>
+					<li><a href="./bodys/01_html/textEX02.html" target="main">textEX02_
+							Pre , Xmp</a></li>
+					<li><a href="./bodys/01_html/textEX03.html" target="main">목록
+							표시 태그</a></li>
+					<li><a href="./bodys/01_html/textEX04.html" target="main">textEX04_
+							DL,DT,DD</a></li>
+					<li><a href="./bodys/01_html/textEX05.html" target="main">textEX05_
+							A , href</a></li>
+				</ul></li>
+			<li class="menu"><a>CSS</a>
+				<ul class="hide">
+					<li><a href="./bodys/02_css/example_1.html" target="main">Layout_Float
+							With Overflow</a></li>
+					<li><a href="./bodys/02_css/example_2.html" target="main">Layout_Margin
+							Width</a></li>
+					<li><a href="./bodys/02_css/example_3.html" target="main">One
+							True Layout</a></li>
+					<li><a href="./bodys/02_css/example_4.html" target="main">Absolute
+							Position</a></li>
+					<li><a href="./bodys/02_css/example_5.html" target="main">Absolute
+							Position2</a></li>
+					<li><a href="./bodys/02_css/example_6.html" target="main">Absolute
+							Position3</a></li>
+					<li><a href="./bodys/02_css/externalEx.html" target="main">CSS
+							External</a></li>
+					<li><a href="./bodys/02_css/internalEx.html" target="main">CSS
+							Internal, InLine</a></li>
+					<li><a href="./bodys/02_css/selectorEx01.html" target="main">Selector
+							Basic_tag, id, class</a></li>
+					<li><a href="./bodys/02_css/selectorEx02.html" target="main">Selector_Child
+							& Desc</a></li>
+					<li><a href="./bodys/02_css/selectorEx03.html" target="main">Selector_속성(상태),
+							반응(이벤트), 구조</a></li>
+					<li><a href="./bodys/02_css/attrEx01.html" target="main">Basic
+							Attributes</a></li>
+					<li><a href="./bodys/02_css/attrEx03.html" target="main">CSS에서
+							많이 사용되는 속성들</a></li>
+					<li><a href="./bodys/02_css/fontEx.html" target="main">Font
+							Test</a></li>
+					<li><a href="./bodys/02_css/sizeEx.html" target="main">Style
+							Property SizeEx</a></li>
+				</ul></li>
+
+			<li class="menu"><a>JavaScript</a>
+				<ul class="hide">
+					<li><a href="./bodys/03_javascript/js01_output.html"
+						target="main">JavaScript Basic01 : Output</a></li>
+					<li><a href="./bodys/03_javascript/js02_variable.html"
+						target="main">JavaScript Basic02 : 변수</a></li>
+					<li><a href="./bodys/03_javascript/js06_messageDlg.html"
+						target="main">Message Dialog</a></li>
+					<li><a href="./bodys/03_javascript/js07_ifelseSw.html"
+						target="main">if then else Test</a></li>
+					<li><a href="./bodys/03_javascript/js08_loopArrayObject.html"
+						target="main">Loop_for/while, Array, Object</a></li>
+					<li><a href="./bodys/03_javascript/js09_function.html"
+						target="main">Function_선언, 사용, 우선순위</a></li>
+					<li><a href="./bodys/03_javascript/js10_dom1.html"
+						target="main">Document Process1_Basic</a></li>
+					<li><a href="./bodys/03_javascript/js10_dom2.html"
+						target="main">Document Process2_event</a></li>
+					<li><a href="./bodys/03_javascript/js10_dom3.html"
+						target="main">Document Process3_실행 절차 Test</a></li>
+					<li><a href="./bodys/03_javascript/js11_varScope.html"
+						target="main">Variable Scope Test</a></li>
+					<li><a href="./bodys/03_javascript/js12_selector.html"
+						target="main">Selector _ id, tag1, tag all</a></li>
+					<li><a href="./bodys/03_javascript/js13_event1.html"
+						target="main">Event Basic</a></li>
+					<li><a href="./bodys/03_javascript/js13_event2.html"
+						target="main">JavaScript Code 작성 _ Internal</a></li>
+					<li><a href="./bodys/03_javascript/js14_style.html"
+						target="main">JavaScript Style Test</a></li>
+					<li><a href="./bodys/03_javascript/js15_homew.html"
+						target="main">Image Size 조정하기</a></li>
+				</ul></li>
+
+			<li class="menu"><a>JQuery</a>
+				<ul class="hide">
+					<li><a href="./bodys/04_jquery/jq01_basic.html" target="main">jQuery
+							Basic</a></li>
+					<li><a href="./bodys/04_jquery/jq02_selector.html"
+						target="main">Selector , Hover event Test</a></li>
+					<li><a href="./bodys/04_jquery/jq03_attr.html" target="main">attr
+							메서드 Test</a></li>
+					<li><a href="./bodys/04_jquery/jq04_style.html" target="main">css
+							Style Test</a></li>
+					<li><a href="./bodys/04_jquery/jq05_event1.html" target="main">Event
+							Test 1</a></li>
+					<li><a href="./bodys/04_jquery/jq05_event2Chain.html"
+						target="main">Event Test 2</a></li>
+					<li><a href="./bodys/04_jquery/jq06_aniFrame.html"
+						target="main">time 관련 메서드</a></li>
+					<li><a href="./bodys/04_jquery/jq07_aniFade.html"
+						target="main">다양한 효과</a></li>
+				</ul></li>
+
+
+		</ul>
+	</div>
+</body>
+</html>

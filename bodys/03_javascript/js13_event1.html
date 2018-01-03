@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Event Basic **</title>
+
+<style type="text/css">
+	button {border-radius: 15px 15px 15px 15px; 
+			background-color:#D1E0E6; color:aqua; 
+			text-shadow: 2px 2px 2px navy; 
+			font-size:1.5em; width:200px;height:80px;}
+</style>
+
+<script type="text/javascript">
+// Test 3. 
+	onload = function() {
+		var b = document.getElementById('tbn');
+		b.onclick=function() {
+			// alert('Traditional Event 처리 방식') ;
+// Test 4. this	
+		this.textContent = this.textContent + '★' ;
+		// this 사용하면 이벤트 발생 객체 자신에 접근 가능 
+        // textContent 속성 : 자기자신의 문자를 의미 
+        // 특수문자 ★ : 한글 'ㅁ' + 한자 클릭
+		}
+// Test 5. 기본 이벤트 제거
+		var a = document.getElementById('remove');
+		a.onclick=function() {
+			return false ;  // 기본 이벤트 제거
+		}
+		
+	}  // onload
+// Test 2.
+	function scriptTest(){
+		alert('inLine with script 방식') ;
+	}
+</script>
+</head>
+<body>
+<h3>* Test 5. 기본 이벤트 제거 </h3>
+<a id="remove" href="http://www.naver.com">Remove Event</a><br><br>
+<a href="js13_event2.html">Page Move Test</a><br><br>
+
+<button onclick="alert('inLine event 방식')">1. inLine</button>
+<h2>*** Event Test ***</h2>
+<h2>=> onclick : 이벤트 속성, 여기에 함수를 지정</h2>
+<h2>=> 이 함수를 이벤트 핸들러 또는 이벤트 리스너 라고 함</h2>
+<h2>=> on 을 제외한 click 을 이벤트이름 또는 이벤트 타입 이라함</h2>
+<h2>=> 이벤트 모델 : document 객체에 이벤트를 연결하는 방법을 이벤트 모델 이라함</h2>
+<h2>.............=> 인라인 방식, 인라인+스크립트 , 고전적 방식</h2>
+
+<button onclick="scriptTest()">2. scriptTest</button><br><br>
+
+<button id="tbn">3. Traditional</button><br> 
+
+</body>
+</html>

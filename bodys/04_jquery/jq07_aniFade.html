@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** 다양한 효과 ***</title>
+<script src='../jqLib/jquery-3.2.1.min.js'></script>
+<script>
+//효과 메서드 : show, hide, toggle(show/hide), slide, fade
+	$(document).ready(function(){
+		$('button').click(function(){
+			// 간단한 효과를 적용합니다.
+			$('.page').fadeToggle('slow') ;
+			$('.img1').slideToggle('slow') ;
+			$('.img2').slideToggle('normal') ;
+			$('.img3').slideToggle('fast') ;
+			$('.img4').toggle('slow') ;
+			$('.img5').fadeToggle('slow') ;
+		})
+		
+	}) // ready
+</script>
+</head>
+<body>
+<button>Animation Toggle</button>
+<div class='page'>
+	<h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+</div>
+<h1>** fadeToggle Image **</h1> 
+<img class="img5" src="a5.png" width=200 height=200>
+
+<h1>** slideToggle **</h1>
+<img class="img1" src="a1.png" width=200 height=200>  
+<img class="img2" src="a2.png" width=200 height=200>
+<img class="img3" src="a3.png" width=200 height=200>
+
+<h1>** Toggle **</h1>
+<img class="img4" src="a4.png" width=200 height=200> 
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Document Process1_Basic **</title>
+<!-- 
+// 1. 기본 흐름 
+<script type="text/javascript">
+	alert('Process - 0') ;
+	//h3 태그의 배경 색상을 변경합니다. 
+	document.querySelector('h3').style.backgroundColor = 'red';
+	//h4 태그의 배경 색상을 변경합니다.
+	document.querySelector('h4').style.backgroundColor = 'blue';
+</script> -->
+</head>
+<body>
+<h3>Process - 1</h3>
+<script>alert('Process - 2')</script>
+<h4>Process - 3</h4>
+<script>alert('Process - 4')</script>
+<h5>웹 페이지 생성순서 - 5</h5>
+<h5>=> h 태그 생성 이전에 스크립트 실행 되므로 반영 안됨
+	=> 해결1 실행 순서를 조정</h5>
+	
+<!-- 2. 해결1 => 실행 순서를 조정 
+	 3. 해결2 => 이벤트 적용 - window.onload (dom2)  -->	
+<script>
+	document.querySelector('h3').style.backgroundColor = 'red';
+	document.querySelector('h4').style.backgroundColor = 'blue';
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Variable Scope Test **</title>
+<script type="text/javascript">
+	window.onload = function () {
+		function f(cnt) {
+			alert('before i = ' + i);  // 지역변수 선언 전에 사용 Test	
+		 	for (var i=0;i<cnt; i++){
+		 	} // for
+		 	return i ;
+		 // 변수 i가 for문 밖에서의 사용 Test  
+		} // f(cnt)
+		alert(f(10)) ;
+		alert('outer i = ' + i); // 외부에서 지역변수 사용 Test
+	} // onload
+</script>
+</head>
+<body>
+<h3>** for 와 변수범위 Test **</h3>
+<h5>지역변수 i 의 범위는 { ... } 이 아니고 함수 f 전체의 영역이 됨</h5>
+<h5>=> { ... } 이 아니고 함수 f에 종속됨</h5>
+<h5>=> 지역변수 i 는 파싱 단계에서 함수와 함께 정의되며 이때 undifined 값을 가짐</h5>
+</body>
+</html>
